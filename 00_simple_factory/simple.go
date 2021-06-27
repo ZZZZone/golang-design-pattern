@@ -13,6 +13,8 @@ func NewAPI(t int) API {
 		return &hiAPI{}
 	} else if t == 2 {
 		return &helloAPI{}
+	} else if t == 3 {
+		return &nihaoAPI{}
 	}
 	return nil
 }
@@ -32,3 +34,12 @@ type helloAPI struct{}
 func (*helloAPI) Say(name string) string {
 	return fmt.Sprintf("Hello, %s", name)
 }
+
+// 你好API
+type nihaoAPI struct{}
+
+func (n *nihaoAPI) Say(name string) string {
+	return fmt.Sprintf("你好, %s", name)
+}
+
+//Say 你好 to name

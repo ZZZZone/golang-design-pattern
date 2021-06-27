@@ -35,5 +35,6 @@ func TestParallelSingleton(t *testing.T) {
 		if instances[i] != instances[i-1] {
 			t.Fatal("instance is not equal")
 		}
+		instances[i].foo()
 	}
 }

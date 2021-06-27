@@ -23,4 +23,8 @@ func TestOperator(t *testing.T) {
 	if compute(factory, 4, 2) != 2 {
 		t.Fatal("error with factory method pattern")
 	}
+	factory = MultiOperatorFactory{}
+	if compute(factory, 4, 2) != 8 {
+		t.Fatal("error with factory method pattern")
+	}
 }

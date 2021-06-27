@@ -36,6 +36,8 @@ type adapter struct {
 }
 
 //Request 实现Target接口
+// 对外统一暴露Reques接口, Requeset内部实际上是被适配的某个方法
+// 但是这样要保证被适配的方法对入参和出参应该有一些限制
 func (a *adapter) Request() string {
 	return a.SpecificRequest()
 }
