@@ -14,6 +14,8 @@ type Proxy struct {
 	real RealSubject
 }
 
+// Proxy 和 RealSubject 都实现了Do方法
+// 例如缓存， 分页
 func (p Proxy) Do() string {
 	var res string
 
